@@ -2,7 +2,6 @@ import config
 import os
 import re
 import shutil
-from urllib.parse import urlparse
 
 shutil.copytree(os.getcwd(), './site_output')
 os.chdir('/site_output')
