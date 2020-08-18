@@ -11,7 +11,7 @@ def get_list_of_gmis():
     list = []
     for r, d, f in os.walk(cwd):
         for file in f:
-            if file.endswith(".gmi"):
+            if file.endswith(".gmi") and not (r == cwd and file.startswith("index")):
                 # provide relative links
                 list.append(os.path.join(r, file)[len(cwd) + 1:])
     return list
