@@ -46,7 +46,7 @@ for gmi in gmi_files:
 for dest in incoming_links.keys():
     if os.path.exists(dest) and dest.endswith(".gmi"):
         incoming = incoming_links.get(dest)
-        incoming = list(map((lambda x: '=> /' + config.gemdocs_root + x), incoming))
+        incoming = list(map((lambda x: '=> /' + config.gemdocs_root + x + ' ' + x), incoming))
         with open(dest, 'a') as file:
             file.write('\n\n' + '## Incoming links' + '\n\n')
             file.writelines(incoming)
