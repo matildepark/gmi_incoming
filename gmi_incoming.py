@@ -48,6 +48,6 @@ for dest in incoming_links.keys():
         incoming = incoming_links.get(dest)
         incoming = list(map((lambda x: '=> /' + config.gemdocs_root + x), incoming))
         with open(dest, 'a') as file:
-            file.write('\n' + '## Incoming links' + '\n\n')
+            file.write('\n\n' + '## Incoming links' + '\n\n')
             file.writelines(incoming)
             file.close()
