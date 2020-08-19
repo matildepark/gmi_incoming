@@ -30,7 +30,7 @@ for gmi in gmi_files:
             if dest.startswith('/'):
                 dest = dest[1:]
             # Absolute paths need to be modified.
-            if dest.startswith(config.gemdocs_root) and config.gemdocs.root != '':
+            if dest.startswith(config.gemdocs_root) and config.gemdocs_root != '':
                 dest = dest[len(config.gemdocs_root) + 1:]
             # resolve relative paths into root of site dir
             if dest.startswith('..'):
