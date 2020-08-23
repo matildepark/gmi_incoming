@@ -2,15 +2,21 @@
 
 A basic Python script for constructing bidirectional links across a Gemini site.
 
-Iterates through all internal links and appends incoming links on the destination pages.
+Iterates through all internal links and appends incoming links on the
+destination pages.
 
 ## Usage
 
-We assume that you keep your site's files in a folder and upload it occasionally. We also assume that you don't link internally with `gemini://` links; the script accepts either relative or root-oriented paths. 
+We assume that you keep your site's files in a folder and upload it
+occasionally. We also assume that you don't link internally with `gemini://`
+links; the script accepts either relative or root-oriented paths. 
 
-Clone this repository, add your tilde folder's location if necessary to `config.py`, `cd` to your site's directory in bash, and run `gmi_incoming.py` inside that working directory.
+Clone this repository, add your tilde folder's location if necessary to
+`config.py`, `cd` to your site's directory in bash, and run `gmi_incoming.py`
+inside that working directory.
 
-The script will output a `site_output` folder. You'd then `cd` into that folder and `rsync` to your actual site, for example:
+The script will output a `site_output` folder. You'd then `cd` into that folder
+and `rsync` to your actual site, for example:
 
 ```
 rsync -zz -avh --del ~/gemdocs/site_output/ you@yoursite:~gemdocs/
